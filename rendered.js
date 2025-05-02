@@ -46,8 +46,16 @@ function loadFiles(category) {
     }
 }
 
+function normalizePath(filePath) {
+    const dirname = path.dirname(filePath);
+    const basename = path.basename(filePath).normalize('NFC');
+    return path.join(dirname, basename);
+}
 
-function playSound(filePath) {
+
+
+function playSound(fPath) {
+    let filePath = normalizePath(fPath)
     const volumeSlider = document.getElementById('volumeSlider');
     const volume = parseInt(volumeSlider.value) / 100;
 
