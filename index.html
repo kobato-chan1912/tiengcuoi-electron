@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuoicuive</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5d0fe, #c3cfe2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Anime Ace', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff99cc;
+            margin: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header-btn {
+            background-color: #fff;
+            border: 2px solid #ff66cc;
+            border-radius: 10px;
+            padding: 5px 15px;
+            font-weight: bold;
+            color: #ff66cc;
+            transition: background-color 0.2s, transform 0.2s;
+            width: 120px;
+        }
+
+        .header-btn:hover {
+            background-color: #ff99cc;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .header-btn:active {
+            transform: scale(0.95);
+        }
+
+        .header .sound-toggle {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .sound-toggle span {
+            margin-right: 10px;
+            font-size: 14px;
+            color: #ff66cc;
+        }
+
+        .header .stop-btn {
+            background-color: #fff;
+            border: 2px solid #ff66cc;
+            border-radius: 10px;
+            padding: 5px 20px;
+            font-weight: bold;
+            color: #ff66cc;
+            transition: background-color 0.2s;
+            margin-left: 10px;
+        }
+
+        .header .stop-btn:hover {
+            background-color: #ff99cc;
+            color: #fff;
+        }
+
+        .header .version {
+            background-color: #ff99cc;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        .cute-btn {
+            background-color: #fff;
+            border: 2px solid #ff66cc;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+            transition: transform 0.2s, background-color 0.2s;
+            color: #ff66cc;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 120px;
+
+        }
+
+        .cute-btn:hover {
+            background-color: #ff99cc;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .cute-btn:active {
+            transform: scale(0.95);
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            color: #ff66cc;
+            font-weight: bold;
+        }
+
+        .footer span {
+            background: linear-gradient(90deg, #ff66cc, #66ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        input[type="checkbox"] {
+            position: relative;
+            width: 48px;
+            /* Giảm từ 80px xuống 48px */
+            height: 24px;
+            /* Giảm từ 40px xuống 24px */
+            -webkit-appearance: none;
+            background: #c6c6c6;
+            outline: none;
+            border-radius: 12px;
+            /* Giảm từ 20px xuống 12px để bo góc phù hợp */
+            box-shadow: inset 0 0 3px rgba(255, 0, 0, 0.2);
+            /* Giảm bóng */
+            transition: 0.7s;
+        }
+
+        input:checked[type="checkbox"] {
+            background: #03a9f4;
+        }
+
+        input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            /* Giảm từ 40px xuống 24px */
+            height: 24px;
+            /* Giảm từ 40px xuống 24px */
+            border-radius: 12px;
+            /* Giảm từ 20px xuống 12px */
+            top: 0;
+            left: 0;
+            background: #ffffff;
+            transform: scale(1.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            /* Giảm bóng */
+            transition: .5s;
+        }
+
+        input:checked[type="checkbox"]:before {
+            left: 24px;
+            /* Giảm từ 40px xuống 24px để nút trượt di chuyển đúng */
+        }
+
+
+
+        .volume-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .volume-label {
+            margin-right: 10px;
+            color: #ff66cc;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .volume-slider {
+            -webkit-appearance: none;
+            width: 200px;
+            height: 8px;
+            background: #ffccff;
+            border-radius: 5px;
+            outline: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+            border: 1px solid #ff66cc;
+        }
+
+        .volume-slider:hover {
+            opacity: 1;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #ff66cc;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .volume-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #ff66cc;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #ff66cc;
+        }
+
+
+
+        /* Modal Style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Toggle Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        .custom-modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .custom-modal-content {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            max-width: 622px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .table-container {
+            max-height: 400px;
+            /* Điều chỉnh chiều cao tối đa */
+            overflow-y: auto;
+            /* Cuộn dọc */
+            display: block;
+            /* Đảm bảo bảng có thể cuộn */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="logo text-center mb-4">
+            <img width="300px" src="https://tiengcuoi.com/wp-content/uploads/2022/11/logo_light_AC2-1024x299.png"
+                alt="">
+        </div>
+
+        <div class="volume-container mb-3">
+            <span class="volume-label">Âm lượng</span>
+            <input type="range" min="0" max="100" value="50" class="volume-slider" id="volumeSlider">
+        </div>
+        <!-- Header -->
+        <div class="header">
+            <button class="header-btn">Hiệu ứng</button>
+            <button class="header-btn">Nhạc</button>
+            <button class="header-btn">Dừng</button>
+            <button class="header-btn" id="settings-btn">Cài đặt</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="header-modal mb-4">
+                    <h4>Cài đặt</h4>
+                </div>
+                <div class="set-1 d-flex mb-3">
+                    <label class="switch">
+                        <input type="checkbox" id="mix-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span style="margin-left: 10px;">Trộn âm thanh</span>
+                </div>
+                <div class="set-1 d-flex mb-3">
+                    <label class="switch">
+                        <input type="checkbox" id="shortcut-toogle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span style="margin-left: 10px;">Phím tắt</span>
+
+                </div>
+                <a onclick="openShortcutModal()" href="javascript:void(0)">Sửa âm thanh</a>
+            </div>
+        </div>
+
+
+        <!-- Shortcut Modal -->
+        <div id="customShortcutModal" class="custom-modal" style="display: none;">
+            <div class="custom-modal-content">
+                <h5 class="mb-3">Sửa âm thanh</h5>
+
+                <div class="table-container">
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Tên</th>
+                                <th>Đường dẫn</th>
+                                <th>Loại</th>
+                                <th style="width: 90px;">Phím tắt</th>
+                                <th style="width: 86px;"></th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="shortcutSettings"></tbody>
+                    </table>
+                </div>
+
+                <div class="text-end mt-3">
+                    <button onclick="addNewShortcutRow()" class="header-btn me-2">Thêm file</button>
+                    <button onclick="resetDatabase()" class="header-btn me-2">Reset</button>
+                    <button onclick="saveShortcuts()" class="header-btn me-2">Lưu</button>
+                    <button onclick="closeShortcutModal()" class="header-btn">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Button Grid -->
+        <div id="button-container"></div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span>NÂNG CẤP PHIÊN BẢN TIỀN CUỘI PRO</span>
+            <div class="key">
+                KEY: <span>XXXX</span>
+            </div>
+            <div class="key mb-3">
+                HSD: <span>25/10/2025</span>
+            </div>
+            <div class="enter-key">
+                <a href="javascript:void(0)">Nhập key</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="rendered.js"></script>
+
+</body>
+
+</html>
