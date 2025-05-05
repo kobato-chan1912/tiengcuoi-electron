@@ -1,9 +1,13 @@
+const DOMAIN = 'https://4309-2001-ee1-f703-9ef0-246e-2d53-61c0-dd5f.ngrok-free.app';
+
+
 const $ = require('jquery')
-const { ipcRenderer, webUtils } = require('electron');
-
-
+const { ipcRenderer, webUtils, app } = require('electron');
+const shell = require('electron').shell;
+const { machineIdSync } = require('node-machine-id');
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
 
 const buttonContainer = document.getElementById('button-container');
 const baseFolder = path.join(__dirname, 'data');
@@ -105,16 +109,52 @@ window.onload = () => {
 
     // Modal controls
     const settingsBtn = document.getElementById('settings-btn');
-    const modal = document.getElementById('settings-modal');
-    const closeBtn = document.querySelector('.close');
+    const keyBtn = document.getElementById('enter-key-btn');
+
+    const settingsModal = document.getElementById('settings-modal');
+    const keyModal = document.getElementById('key-modal');
+
+    const allModals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close');
+
+    // Hàm đóng tất cả modal
+    function closeAllModals() {
+        allModals.forEach(modal => modal.style.display = 'none');
+    }
+
+    // Gán sự kiện cho nút mở modal
+    settingsBtn.onclick = () => {
+        if (licenseTypeGlobal === 'free') {
+            alert('Vui lòng nâng cấp để mở khóa tính năng này!');
+            return;
+        }
+        closeAllModals();
+        settingsModal.style.display = 'block';
+    };
+
+    keyBtn.onclick = () => {
+        closeAllModals();
+        keyModal.style.display = 'block';
+    };
+
+    // Gán sự kiện cho tất cả nút close
+    closeButtons.forEach(btn => {
+        btn.onclick = closeAllModals;
+    });
+
+    // Gán sự kiện click ra ngoài để đóng modal
+    window.onclick = (event) => {
+        allModals.forEach(modal => {
+            if (event.target === modal) {
+                closeAllModals();
+            }
+        });
+    };
+
+
+
     const mixToggle = document.getElementById('mix-toggle');
     const shortcutToogle = document.getElementById('shortcut-toogle');
-
-    settingsBtn.onclick = () => modal.style.display = 'block';
-    closeBtn.onclick = () => modal.style.display = 'none';
-    window.onclick = (event) => {
-        if (event.target == modal) modal.style.display = 'none';
-    }
 
     mixToggle.onchange = () => {
         mixedMode = mixToggle.checked;
@@ -140,7 +180,7 @@ window.onload = () => {
 
 document.addEventListener('keydown', (e) => {
     const checkModalOpen = document.querySelector("#customShortcutModal").style.display
-    if (shortcutMode && checkModalOpen=='none') {
+    if (shortcutMode && checkModalOpen == 'none') {
         const key = e.key.toUpperCase();
         const dbPath = path.join(__dirname, 'database.json');
         const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
@@ -321,4 +361,126 @@ async function chooseFile(index) {
 
     openShortcutModal(); // hoặc reload UI tương ứng
 }
+
+// ads
+document.addEventListener('DOMContentLoaded', function () {
+    loadAds();
+});
+
+// load ads
+async function loadAds() {
+    try {
+        const response = await fetch(`${DOMAIN}/api/ads`);
+        const ads = await response.json();
+
+        const listContainer = document.querySelector('#ad-slider .splide__list');
+        listContainer.innerHTML = ''; // clear old content
+
+        ads
+            .filter(ad => ad.status === 1)
+            .forEach(ad => {
+                const li = document.createElement('li');
+                li.classList.add('splide__slide');
+
+                const anchor = document.createElement('a');
+                anchor.href = "javascript:void(0)";
+                anchor.onclick = () => openBrowser(ad.url);
+
+                const img = document.createElement('img');
+                img.classList.add('w-100');
+                img.src = ad.path;
+
+                anchor.appendChild(img);
+                li.appendChild(anchor);
+                listContainer.appendChild(li);
+            });
+
+        // Init Splide if not already initialized
+        new Splide('#ad-slider', {
+            type: 'loop', // Vòng lặp slider
+            perPage: 1, // Hiển thị 1 slide mỗi lần
+            autoplay: true, // Tự động chạy
+            interval: 5000, // Thời gian chuyển slide (3 giây)
+            pauseOnHover: true, // Tạm dừng khi hover
+            arrows: true, // Hiển thị nút điều hướng
+            pagination: true, // Hiển thị chấm điều hướng
+        }).mount();
+
+    } catch (err) {
+        console.error('Lỗi khi tải quảng cáo:', err);
+    }
+}
+
+function openBrowser(url) {
+    shell.openExternal(url);
+
+}
+
+
+// xử lý license 
+function getMachineId() {
+    try {
+        return machineIdSync();
+    } catch {
+        return null;
+    }
+}
+
+
+
+async function checkEnterLicense(license) {
+    const machine_id = getMachineId();
+
+    try {
+        const res = await axios.post(`${DOMAIN}/api/license-key/verify`, {
+            license,
+            machine_id,
+        });
+
+        return res.data;
+    } catch (err) {
+        console.error('Lỗi khi gọi API:', err.message);
+        return { valid: false, license_type: 'free' };
+    }
+}
+
+
+document.getElementById('submit-license').addEventListener('click', async () => {
+    const license = document.getElementById('license-input').value.trim();
+
+    if (!license) {
+        alert("Vui lòng nhập license!");
+        return;
+    }
+
+    const result = await checkEnterLicense(license);
+
+    if (result.valid) {
+        ipcRenderer.send('save-license', license);
+        alert('License hợp lệ! Vui lòng khởi động lại ứng dụng.');
+    } else {
+        alert('License không hợp lệ.');
+    }
+});
+let licenseTypeGlobal = 'free';
+async function getLicenseInfoFromMain() {
+    const { licenseType, expiredDate } = await ipcRenderer.invoke('get-license-info');
+    console.log('License Type:', licenseType);
+    console.log('Expired Date:', expiredDate);
+
+    if (licenseType === 'free') {
+        document.getElementById('license-info').innerHTML = 'Phiên bản miễn phí';
+    } else {
+        licenseTypeGlobal = 'vip'
+        document.getElementById('license-info').innerHTML = `Phiên bản VIP`;
+        if (expiredDate) {
+            document.getElementById('license-info').innerHTML += `, hết hạn vào ${expiredDate}`;
+        }
+    }
+}
+
+getLicenseInfoFromMain()
+
+
+
 

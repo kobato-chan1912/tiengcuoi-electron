@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <style>
         body {
             background: linear-gradient(135deg, #f5d0fe, #c3cfe2);
@@ -393,6 +394,20 @@
         </div>
 
 
+        <div id="key-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="header-modal mb-3">
+                    <h4>Nhập key</h4>
+                </div>
+                <div class="mb-3">
+                    <input type="text" id="license-input" placeholder="Nhập key tại đây" class="form-control">
+                </div>
+                <a id="submit-license" href="javascript:void(0)">Áp dụng</a>
+            </div>
+        </div>
+
+
         <!-- Shortcut Modal -->
         <div id="customShortcutModal" class="custom-modal" style="display: none;">
             <div class="custom-modal-content">
@@ -433,15 +448,33 @@
 
         <!-- Footer -->
         <div class="footer">
-            <span>NÂNG CẤP PHIÊN BẢN TIỀN CUỘI PRO</span>
-            <div class="key">
-                KEY: <span>XXXX</span>
-            </div>
-            <div class="key mb-3">
-                HSD: <span>25/10/2025</span>
-            </div>
+            <!-- <span>NÂNG CẤP PHIÊN BẢN TIỀN CUỘI PRO</span> -->
+            <span id="license-info">
+
+            </span>
             <div class="enter-key">
-                <a href="javascript:void(0)">Nhập key</a>
+                <a id="enter-key-btn" href="javascript:void(0)">Nhập key</a>
+            </div>
+        </div>
+
+
+        <div class="ads mt-5">
+            <div class="splide" id="ad-slider">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a href="javascript:void(0)" onclick="openBrowser('https://wpadvancedads.com/')" >
+                                <img class="w-100" src="https://wpadvancedads.com/wp-content/uploads/2023/09/aa-slider-demo-slide3.png">
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <img class="w-100" src="https://wpadvancedads.com/wp-content/uploads/2023/09/aa-slider-demo-slide3.png">
+                        </li>
+                        <li class="splide__slide">
+                            <img class="w-100" src="https://wpadvancedads.com/wp-content/uploads/2023/09/aa-slider-demo-slide3.png">
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -449,9 +482,13 @@
     </div>
 
 
+   
+
+
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="rendered.js"></script>
 
 </body>

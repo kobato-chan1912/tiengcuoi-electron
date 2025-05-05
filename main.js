@@ -2,6 +2,9 @@ const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const fsPromise = require('fs').promises;
+const { checkLicense } = require('./license');
+const LICENSE_FILE = path.join(app.getPath('userData'), 'license.json');
+
 let mainWindow;
 
 function createWindow() {
@@ -10,8 +13,9 @@ function createWindow() {
     height: 800,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false, 
-      enableRemoteModule: true, 
+      contextIsolation: false,
+      enableRemoteModule: true,
+      devTools: true,
 
     }
   });
@@ -42,14 +46,14 @@ app.on('activate', function () {
 
 
 ipcMain.handle('dialog:openFile', async () => {
-    const { canceled, filePaths } = await dialog.showOpenDialog({
-      properties: ['openFile'],
-      filters: [{ name: 'Audio', extensions: ['mp3', 'wav'] }]
-    });
-    if (canceled) return null;
-    return filePaths[0];
+  const { canceled, filePaths } = await dialog.showOpenDialog({
+    properties: ['openFile'],
+    filters: [{ name: 'Audio', extensions: ['mp3', 'wav'] }]
   });
-  
+  if (canceled) return null;
+  return filePaths[0];
+});
+
 
 ipcMain.handle('dialog:saveFile', async (event, defaultName) => {
   const result = await dialog.showSaveDialog({
@@ -78,8 +82,46 @@ ipcMain.handle('select-folder', async (event) => {
   });
 
   if (!result.canceled) {
-    return result.filePaths[0]; 
+    return result.filePaths[0];
   } else {
-    return null; 
+    return null;
   }
 });
+
+ipcMain.handle('get-user-data-path', () => {
+  return app.getPath('userData');
+});
+
+ipcMain.on('save-license', (event, license) => {
+  const data = { license };
+  fs.writeFileSync(LICENSE_FILE, JSON.stringify(data));
+});
+
+
+
+
+let licenseCache = null;
+
+ipcMain.handle('get-license-info', async () => {
+  // Nếu cache chưa có, kiểm tra lại
+  if (!licenseCache) {
+    const { valid, licenseType, expiredDate } = await checkLicense();
+
+    global.licenseType = licenseType;
+    global.valid = valid;
+    global.expiredDate = expiredDate;
+
+    licenseCache = {
+      licenseType,
+      expiredDate
+    };
+
+    console.log('[Checked] License:', licenseType, expiredDate);
+  }
+
+  return {
+    licenseType: global.licenseType || 'free',
+    expiredDate: global.expiredDate || null
+  };
+});
+
