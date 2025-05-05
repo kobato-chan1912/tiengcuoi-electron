@@ -5,3 +5,5 @@ output/*
 temp
 .DS_Store
 package-lock.json
+build/
+assets/

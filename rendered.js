@@ -408,6 +408,16 @@ async function loadAds() {
 
     } catch (err) {
         console.error('Lỗi khi tải quảng cáo:', err);
+        const container = document.querySelector('.ads');
+        container.innerHTML = ''; // remove Splide structure
+
+        const fallbackImg = document.createElement('img');
+        fallbackImg.classList.add('w-100');
+        fallbackImg.src = 'assets/ads.png';
+
+        container.appendChild(fallbackImg);
+
+
     }
 }
 
