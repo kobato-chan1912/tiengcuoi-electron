@@ -1,6 +1,3 @@
-const DOMAIN = 'https://4309-2001-ee1-f703-9ef0-246e-2d53-61c0-dd5f.ngrok-free.app';
-
-
 const $ = require('jquery')
 const { ipcRenderer, webUtils, app } = require('electron');
 const shell = require('electron').shell;
@@ -17,7 +14,8 @@ let shortcutMode = false;
 let allAudios = [];
 let currentCategory = 'effect';
 
-
+require('dotenv').config();
+const DOMAIN = process.env.DOMAIN;
 
 function loadFiles(category) {
     buttonContainer.innerHTML = '';

@@ -3,6 +3,8 @@ const path = require('path');
 const axios = require('axios');
 const { machineIdSync } = require('node-machine-id');
 const { app } = require('electron');
+require('dotenv').config();
+const DOMAIN = process.env.DOMAIN;
 
 const LICENSE_FILE = path.join(app.getPath('userData'), 'license.json');
 console.log('License file path:', LICENSE_FILE);
@@ -28,7 +30,7 @@ async function checkLicense() {
   if (!license) return { valid: false, licenseType: 'free' };
 
   try {
-    const res = await axios.post('https://4309-2001-ee1-f703-9ef0-246e-2d53-61c0-dd5f.ngrok-free.app/api/license-key/verify', {
+    const res = await axios.post(`${DOMAIN}/api/license-key/verify`, {
       license,
       machine_id
     });

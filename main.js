@@ -4,6 +4,7 @@ const fs = require('fs');
 const fsPromise = require('fs').promises;
 const { checkLicense } = require('./license');
 const LICENSE_FILE = path.join(app.getPath('userData'), 'license.json');
+require('dotenv').config();
 
 let mainWindow;
 
@@ -11,11 +12,12 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 600,
     height: 800,
+    title: process.env.APP_NAME,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
       enableRemoteModule: true,
-      devTools: true,
+      devTools: false,
 
     }
   });
