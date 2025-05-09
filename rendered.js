@@ -24,8 +24,11 @@ function loadFiles(category) {
     const dbPath = path.join(__dirname, 'database.json');
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 
-    const filtered = data.filter(item => item.type === category);
+    let filtered = data.filter(item => item.type === category);
 
+    if (licenseTypeGlobal === 'free') {
+        filtered = filtered.filter(item => item.access === 'free');
+    }
 
     const rowSize = 3;
     for (let i = 0; i < filtered.length; i += rowSize) {
@@ -47,6 +50,7 @@ function loadFiles(category) {
         buttonContainer.appendChild(row);
     }
 }
+
 
 function normalizePath(filePath) {
     const dirname = path.dirname(filePath);
@@ -98,7 +102,6 @@ function stopSound() {
 
 // Gán các sự kiện vào nút
 window.onload = () => {
-    loadFiles('effect');
 
     const headerButtons = document.querySelectorAll('.header-btn');
     headerButtons[0].onclick = () => loadFiles('effect');
@@ -122,10 +125,10 @@ window.onload = () => {
 
     // Gán sự kiện cho nút mở modal
     settingsBtn.onclick = () => {
-        if (licenseTypeGlobal === 'free') {
-            alert('Vui lòng nâng cấp để mở khóa tính năng này!');
-            return;
-        }
+        // if (licenseTypeGlobal === 'free') {
+        //     // alert('Vui lòng nâng cấp để mở khóa tính năng này!');
+        //     return;
+        // }
         closeAllModals();
         settingsModal.style.display = 'block';
     };
@@ -155,11 +158,21 @@ window.onload = () => {
     const shortcutToogle = document.getElementById('shortcut-toogle');
 
     mixToggle.onchange = () => {
+        if (licenseTypeGlobal === 'free') {
+            alert('Vui lòng nâng cấp để mở khóa tính năng này!');
+            mixToggle.checked = !mixToggle.checked;
+            return;
+        }
         mixedMode = mixToggle.checked;
         stopSound(); // Clear any current sound when mode switches
     };
 
     shortcutToogle.onchange = () => {
+        if (licenseTypeGlobal === 'free') {
+            alert('Vui lòng nâng cấp để mở khóa tính năng này!');
+            shortcutToogle.checked = !shortcutToogle.checked;
+            return;
+        }
         shortcutMode = shortcutToogle.checked;
     };
 
@@ -196,6 +209,10 @@ const dbPath = path.join(__dirname, 'database.json');
 const defaultDbPath = path.join(__dirname, 'default_database.json');
 
 function openShortcutModal() {
+    if (licenseTypeGlobal === 'free') {
+        alert('Vui lòng nâng cấp để mở khóa tính năng này!');
+        return;
+    }
     const dbPath = path.join(__dirname, 'database.json');
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     const container = document.getElementById('shortcutSettings');
@@ -484,7 +501,13 @@ async function getLicenseInfoFromMain() {
         if (expiredDate) {
             document.getElementById('license-info').innerHTML += `, hết hạn vào ${expiredDate}`;
         }
+
+
+        document.getElementById('ads-premium').remove();
     }
+
+    loadFiles('effect');
+
 }
 
 getLicenseInfoFromMain()
