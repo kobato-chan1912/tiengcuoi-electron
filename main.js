@@ -4,7 +4,15 @@ const fs = require('fs');
 const fsPromise = require('fs').promises;
 const { checkLicense } = require('./license');
 const LICENSE_FILE = path.join(app.getPath('userData'), 'license.json');
-require('dotenv').config();
+const dotenv = require('dotenv');
+
+// __dirname sẽ là đường dẫn tới thư mục trong asar
+const envPath = path.join(__dirname, '.env');
+
+// Load thủ công từ đường dẫn cụ thể
+dotenv.config({ path: envPath });
+
+
 
 let mainWindow;
 

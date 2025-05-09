@@ -14,7 +14,12 @@ let shortcutMode = false;
 let allAudios = [];
 let currentCategory = 'effect';
 
-require('dotenv').config();
+const dotenv = require('dotenv');
+
+const envPath = path.join(__dirname, '.env');
+
+dotenv.config({ path: envPath });
+
 const DOMAIN = process.env.DOMAIN;
 
 function loadFiles(category) {
