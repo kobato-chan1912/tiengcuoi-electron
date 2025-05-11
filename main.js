@@ -25,7 +25,7 @@ function createWindow() {
       nodeIntegration: true,
       contextIsolation: false,
       enableRemoteModule: true,
-      devTools: false,
+      devTools: true,
 
     }
   });
@@ -44,6 +44,23 @@ app.on('window-all-closed', function () {
     app.quit();
   }
 });
+
+
+app.whenReady().then(() => {
+  const appPath = app.getPath('userData'); // thư mục lưu trữ dữ liệu app (tốt cho database)
+  const dbFile = path.join(appPath, 'database.json');
+  const defaultDbFile = path.join(__dirname, 'default_database.json');
+
+  // Kiểm tra nếu database.json chưa tồn tại
+  if (!fs.existsSync(dbFile)) {
+    // Copy từ default_database.json sang
+    fs.copyFileSync(defaultDbFile, dbFile);
+    console.log('Đã tạo database.json từ default_database.json');
+  } else {
+    console.log('Đã tồn tại database.json');
+  }
+});
+
 
 
 
@@ -135,3 +152,9 @@ ipcMain.handle('get-license-info', async () => {
   };
 });
 
+
+ipcMain.handle('get-db-path', () => {
+  const appPath = app.getPath('userData');
+  const dbFile = path.join(appPath, 'database.json');
+  return dbFile;
+});

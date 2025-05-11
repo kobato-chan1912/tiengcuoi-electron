@@ -27,7 +27,7 @@
     "label": "Cai qq",
     "type": "effect",
     "path": "data/effects/CAI QQ GI DAY.mp3",
-    "shortcut": "B",
+    "shortcut": "",
     "builtin": true,
     "access": "free"
   },
@@ -899,7 +899,7 @@
     "label": "Mono cat",
     "type": "music",
     "path": "data/musics/mono cat.mp3",
-    "shortcut": "A",
+    "shortcut": "",
     "builtin": true,
     "access": "vip"
   },

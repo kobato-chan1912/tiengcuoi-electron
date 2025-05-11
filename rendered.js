@@ -22,11 +22,21 @@ dotenv.config({ path: envPath });
 
 const DOMAIN = process.env.DOMAIN;
 
+let dbPath = null;
+
+ipcRenderer.invoke('get-db-path').then(db => {
+    dbPath = db;
+    console.log('dbPath:', dbPath);
+    // sử dụng dbPath ở đây
+});
+
+
+const defaultDbPath = path.join(__dirname, 'default_database.json');
+
 function loadFiles(category) {
     buttonContainer.innerHTML = '';
     currentCategory = category;
 
-    const dbPath = path.join(__dirname, 'database.json');
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 
     let filtered = data.filter(item => item.type === category);
@@ -198,7 +208,6 @@ document.addEventListener('keydown', (e) => {
     const checkModalOpen = document.querySelector("#customShortcutModal").style.display
     if (shortcutMode && checkModalOpen == 'none') {
         const key = e.key.toUpperCase();
-        const dbPath = path.join(__dirname, 'database.json');
         const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 
         const match = data.find(item => item.shortcut === key);
@@ -210,15 +219,12 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-const dbPath = path.join(__dirname, 'database.json');
-const defaultDbPath = path.join(__dirname, 'default_database.json');
 
 function openShortcutModal() {
     if (licenseTypeGlobal === 'free') {
         alert('Vui lòng nâng cấp để mở khóa tính năng này!');
         return;
     }
-    const dbPath = path.join(__dirname, 'database.json');
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     const container = document.getElementById('shortcutSettings');
     container.innerHTML = '';
@@ -324,7 +330,6 @@ function closeShortcutModal() {
 }
 
 function saveShortcuts() {
-    const dbPath = path.join(__dirname, 'database.json');
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 
     document.querySelectorAll('#shortcutSettings input, #shortcutSettings select').forEach(el => {
@@ -374,7 +379,6 @@ async function chooseFile(index) {
     const filePath = await ipcRenderer.invoke('dialog:openFile');
     if (!filePath) return;
 
-    const dbPath = path.join(__dirname, 'database.json');
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
     data[index].path = filePath;
     fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
