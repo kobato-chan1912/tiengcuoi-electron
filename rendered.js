@@ -44,6 +44,7 @@ function loadFiles(category) {
     if (licenseTypeGlobal === 'free') {
         filtered = filtered.filter(item => item.access === 'free');
     }
+    filtered.sort((a, b) => (a.stt || 0) - (b.stt || 0));
 
     const rowSize = 3;
     for (let i = 0; i < filtered.length; i += rowSize) {
@@ -226,11 +227,33 @@ function openShortcutModal() {
         return;
     }
     const data = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+    data.sort((a, b) => {
+        const sttA = parseInt(a.stt) || 0;
+        const sttB = parseInt(b.stt) || 0;
+        return sttA - sttB;
+    });
+
+
     const container = document.getElementById('shortcutSettings');
     container.innerHTML = '';
 
     data.forEach((item, index) => {
         const row = document.createElement('tr');
+
+
+        // STT
+        const sttCell = document.createElement('td');
+        const sttInput = document.createElement('input');
+        sttInput.type = 'number';
+        sttInput.value = item.stt || index + 1;
+        sttInput.className = 'form-control text-center';
+        sttInput.dataset.index = index;
+        sttInput.dataset.field = 'stt';
+        sttCell.appendChild(sttInput);
+        row.appendChild(sttCell);
+
+
+
 
         // Label
         const labelCell = document.createElement('td');
@@ -354,7 +377,8 @@ function addNewShortcutRow() {
         type: 'effect',
         path: '',
         shortcut: '',
-        builtin: false
+        builtin: false,
+        stt: data.length + 1
     });
     fs.writeFileSync(dbPath, JSON.stringify(data, null, 2));
     openShortcutModal();
@@ -373,6 +397,7 @@ function resetDatabase() {
     fs.copyFileSync(defaultDbPath, dbPath);
     alert('Đã khôi phục dữ liệu mặc định');
     openShortcutModal();
+    loadFiles(currentCategory)
 }
 
 async function chooseFile(index) {

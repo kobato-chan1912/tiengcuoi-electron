@@ -5,7 +5,8 @@
     "path": "data/effects/AI TINH.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 1
   },
   {
     "label": "Bam-dt",
@@ -13,7 +14,8 @@
     "path": "data/effects/BAM-DT.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 2
   },
   {
     "label": "Bão táp",
@@ -21,7 +23,8 @@
     "path": "data/effects/BÃO TÁP.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 3
   },
   {
     "label": "Cai qq",
@@ -29,7 +32,8 @@
     "path": "data/effects/CAI QQ GI DAY.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 4
   },
   {
     "label": "Chơi tới",
@@ -37,7 +41,8 @@
     "path": "data/effects/CHƠI TỚI.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 5
   },
   {
     "label": "Cái gì vậy",
@@ -45,7 +50,8 @@
     "path": "data/effects/CÁI GÌ VẬY.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 6
   },
   {
     "label": "Cười nữ",
@@ -53,7 +59,8 @@
     "path": "data/effects/CƯỜI NỮ.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 7
   },
   {
     "label": "Cười điếm",
@@ -61,7 +68,8 @@
     "path": "data/effects/CƯỜI ĐIẾM.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 8
   },
   {
     "label": "Cười 1",
@@ -69,7 +77,8 @@
     "path": "data/effects/CƯỜI CON NÍT.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 9
   },
   {
     "label": "Cười đểu",
@@ -77,7 +86,8 @@
     "path": "data/effects/CƯỜI ĐỂU.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 10
   },
   {
     "label": "Tha cho",
@@ -85,7 +95,8 @@
     "path": "data/effects/Dong cua tha cho.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 11
   },
   {
     "label": "Gay-can",
@@ -93,7 +104,8 @@
     "path": "data/effects/GAY-CAN.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 12
   },
   {
     "label": "Ghe chua",
@@ -101,7 +113,8 @@
     "path": "data/effects/GHE CHUA.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 13
   },
   {
     "label": "Ga remix",
@@ -109,7 +122,8 @@
     "path": "data/effects/Ga Remix.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 14
   },
   {
     "label": "Hpbd",
@@ -117,7 +131,8 @@
     "path": "data/effects/HPBD.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 15
   },
   {
     "label": "Hồi hộp",
@@ -125,7 +140,8 @@
     "path": "data/effects/HỒI HỘP.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 16
   },
   {
     "label": "Kèm tây",
@@ -133,7 +149,8 @@
     "path": "data/effects/KÈM TÂY.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 17
   },
   {
     "label": "Khoái",
@@ -141,7 +158,8 @@
     "path": "data/effects/KHOÁI KHOÁI KHOÁI.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 18
   },
   {
     "label": "Cạn lời",
@@ -149,7 +167,8 @@
     "path": "data/effects/KHÔNG NÊN LỜI.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 19
   },
   {
     "label": "Kịch tính",
@@ -157,7 +176,8 @@
     "path": "data/effects/KỊCH TÍNH.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 20
   },
   {
     "label": "Khoc remix",
@@ -165,7 +185,8 @@
     "path": "data/effects/Khoc remix.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 21
   },
   {
     "label": "Loser",
@@ -173,7 +194,8 @@
     "path": "data/effects/LOSER.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 22
   },
   {
     "label": "Lêu lêu",
@@ -181,7 +203,8 @@
     "path": "data/effects/LÊU LÊU.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 23
   },
   {
     "label": "Mc",
@@ -189,7 +212,8 @@
     "path": "data/effects/MC giới thiệu.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 24
   },
   {
     "label": "Ngac nhien",
@@ -197,7 +221,8 @@
     "path": "data/effects/NGAC NHIEN.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 25
   },
   {
     "label": "Ngáy ngủ",
@@ -205,7 +230,8 @@
     "path": "data/effects/NGÁY NGỦ.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 26
   },
   {
     "label": "Oh no",
@@ -213,7 +239,8 @@
     "path": "data/effects/OH NO.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 27
   },
   {
     "label": "Quạ kêu",
@@ -221,7 +248,8 @@
     "path": "data/effects/QUẠ KÊU.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 28
   },
   {
     "label": "Nước rửa",
@@ -229,7 +257,8 @@
     "path": "data/effects/Quảng cáo nước rửa bím.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 29
   },
   {
     "label": "Shot",
@@ -237,7 +266,8 @@
     "path": "data/effects/Shot.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 30
   },
   {
     "label": "Thug life",
@@ -245,7 +275,8 @@
     "path": "data/effects/THUG LIFE.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 31
   },
   {
     "label": "Tiếng chó 2",
@@ -253,7 +284,8 @@
     "path": "data/effects/Tiếng chó bị đánh kêu mp3 2.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 32
   },
   {
     "label": "Tiếng chó 3",
@@ -261,7 +293,8 @@
     "path": "data/effects/Tiếng chó sủa kinh hoàng.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 33
   },
   {
     "label": "Wow",
@@ -269,7 +302,8 @@
     "path": "data/effects/WOW.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 34
   },
   {
     "label": "Xì hơi",
@@ -277,7 +311,8 @@
     "path": "data/effects/XÌ HƠI.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 35
   },
   {
     "label": "Yeah",
@@ -285,7 +320,8 @@
     "path": "data/effects/YEAH.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 36
   },
   {
     "label": "Boom",
@@ -293,7 +329,8 @@
     "path": "data/effects/boom hẹn giờ.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 37
   },
   {
     "label": "Bạn đời",
@@ -301,7 +338,8 @@
     "path": "data/effects/bạn đời làm bạn với tui.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 38
   },
   {
     "label": "Chó gừ",
@@ -309,7 +347,8 @@
     "path": "data/effects/chó gừ.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 39
   },
   {
     "label": "Chập điện",
@@ -317,7 +356,8 @@
     "path": "data/effects/chập điện.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 40
   },
   {
     "label": "Xui",
@@ -325,7 +365,8 @@
     "path": "data/effects/coi nhu la xui di.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 41
   },
   {
     "label": "Quỳ",
@@ -333,7 +374,8 @@
     "path": "data/effects/con quỳ con lạy mẹ cha.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 42
   },
   {
     "label": "Cuoi2023",
@@ -341,7 +383,8 @@
     "path": "data/effects/cuoi2023.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 43
   },
   {
     "label": "Cuoi2023a",
@@ -349,7 +392,8 @@
     "path": "data/effects/cuoi2023a.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 44
   },
   {
     "label": "Em be khóc",
@@ -357,7 +401,8 @@
     "path": "data/effects/em be khóc.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 45
   },
   {
     "label": "Em bé cười",
@@ -365,7 +410,8 @@
     "path": "data/effects/em bé cười.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 46
   },
   {
     "label": "Khùng",
@@ -373,7 +419,8 @@
     "path": "data/effects/em bị khùng.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 47
   },
   {
     "label": "Gì vậy trời",
@@ -381,7 +428,8 @@
     "path": "data/effects/gì vậy trời.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 48
   },
   {
     "label": "Heo kêu",
@@ -389,7 +437,8 @@
     "path": "data/effects/heo kêu.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 49
   },
   {
     "label": "Heo ăn",
@@ -397,7 +446,8 @@
     "path": "data/effects/heo ăn.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 50
   },
   {
     "label": "Hỏa tiễn",
@@ -405,7 +455,8 @@
     "path": "data/effects/hỏa tiễn.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 51
   },
   {
     "label": "Khadaubac",
@@ -413,7 +464,8 @@
     "path": "data/effects/khadaubac.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 52
   },
   {
     "label": "Khong de",
@@ -421,7 +473,8 @@
     "path": "data/effects/khong de dau anh.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 53
   },
   {
     "label": "Kèn xe hơi",
@@ -429,7 +482,8 @@
     "path": "data/effects/kèn xe hơi.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 54
   },
   {
     "label": "Muỗi bay",
@@ -437,7 +491,8 @@
     "path": "data/effects/muỗi bay.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 55
   },
   {
     "label": "Quần xì",
@@ -445,7 +500,8 @@
     "path": "data/effects/mời mấy chị mua quần xì.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 56
   },
   {
     "label": "Tra keo",
@@ -453,7 +509,8 @@
     "path": "data/effects/nhac tra keo.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 57
   },
   {
     "label": "Chuyện vui",
@@ -461,7 +518,8 @@
     "path": "data/effects/nhạc nền kể chuyện vui.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 58
   },
   {
     "label": "Nhảy đi",
@@ -469,7 +527,8 @@
     "path": "data/effects/nhảy nhảy đi.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 59
   },
   {
     "label": "Nhẹ",
@@ -477,7 +536,8 @@
     "path": "data/effects/nhẹ.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 60
   },
   {
     "label": "Cha",
@@ -485,7 +545,8 @@
     "path": "data/effects/nếu cha không gả.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 61
   },
   {
     "label": "Remix win",
@@ -493,7 +554,8 @@
     "path": "data/effects/remix win.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 62
   },
   {
     "label": "Ruồi bay",
@@ -501,7 +563,8 @@
     "path": "data/effects/ruồi bay.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 63
   },
   {
     "label": "Sét đánh",
@@ -509,7 +572,8 @@
     "path": "data/effects/sét đánh.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 64
   },
   {
     "label": "Súng ak",
@@ -517,7 +581,8 @@
     "path": "data/effects/súng AK.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 65
   },
   {
     "label": "Súng",
@@ -525,7 +590,8 @@
     "path": "data/effects/súng.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 66
   },
   {
     "label": "Thiếu nợ",
@@ -533,7 +599,8 @@
     "path": "data/effects/thiếu nợ trả hà.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 67
   },
   {
     "label": "Đánh nhau",
@@ -541,7 +608,8 @@
     "path": "data/effects/tiếng đánh nhau.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 68
   },
   {
     "label": "Tông xe",
@@ -549,7 +617,8 @@
     "path": "data/effects/tông xe.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 69
   },
   {
     "label": "Chơi tới",
@@ -557,7 +626,8 @@
     "path": "data/effects/tụi tao chơi là chơi cho tới.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 70
   },
   {
     "label": "Tụng kinh",
@@ -565,7 +635,8 @@
     "path": "data/effects/tụng kinh kiều oanh.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 71
   },
   {
     "label": "Uwee",
@@ -573,7 +644,8 @@
     "path": "data/effects/uwee.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 72
   },
   {
     "label": "Mat day",
@@ -581,7 +653,8 @@
     "path": "data/effects/vi minh qua mat day roi_1.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 73
   },
   {
     "label": "Vinh biet cu",
@@ -589,7 +662,8 @@
     "path": "data/effects/xin vinh biet.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 74
   },
   {
     "label": "Xã bồn cầu",
@@ -597,7 +671,8 @@
     "path": "data/effects/xã bồn cầu.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 75
   },
   {
     "label": "Xì hơi kèn",
@@ -605,7 +680,8 @@
     "path": "data/effects/xì hơi kèn.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 76
   },
   {
     "label": "Xì hơi",
@@ -613,7 +689,8 @@
     "path": "data/effects/xì hơi mắc ỉa.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 77
   },
   {
     "label": "Xì hơi vang",
@@ -621,7 +698,8 @@
     "path": "data/effects/xì hơi vang.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 78
   },
   {
     "label": "À ú xa mà",
@@ -629,7 +707,8 @@
     "path": "data/effects/à ú xa mà.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 79
   },
   {
     "label": "Danh lon",
@@ -637,7 +716,8 @@
     "path": "data/effects/ê đánh lộn không.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 80
   },
   {
     "label": "Can loi",
@@ -645,7 +725,8 @@
     "path": "data/effects/ôi nói khong nen lời.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 81
   },
   {
     "label": "Đi tiểu",
@@ -653,7 +734,8 @@
     "path": "data/effects/đi tiểu.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 82
   },
   {
     "label": "Điện giật",
@@ -661,7 +743,8 @@
     "path": "data/effects/điện giật.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 83
   },
   {
     "label": "Đập dái",
@@ -669,7 +752,8 @@
     "path": "data/effects/đập dái.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 84
   },
   {
     "label": "Đập mép",
@@ -677,7 +761,8 @@
     "path": "data/effects/đập mép.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 85
   },
   {
     "label": "Đề xe",
@@ -685,7 +770,8 @@
     "path": "data/effects/đề xe chạy moto.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 86
   },
   {
     "label": "Ỉa chảy",
@@ -693,7 +779,8 @@
     "path": "data/effects/ỉa chảy.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 87
   },
   {
     "label": "Con quỳ",
@@ -701,7 +788,8 @@
     "path": "data/musics/CON QUỲ.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 88
   },
   {
     "label": "Ctkgn",
@@ -709,7 +797,8 @@
     "path": "data/musics/CTKGN.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 89
   },
   {
     "label": "Cô gái 1",
@@ -717,7 +806,8 @@
     "path": "data/musics/Cô Gái Lam Hồng Remix.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 90
   },
   {
     "label": "Ga ran",
@@ -725,7 +815,8 @@
     "path": "data/musics/Em Ăn Gà Rán Ở Quảng Trường Nhân Dân.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 91
   },
   {
     "label": "Gà gáy",
@@ -733,7 +824,8 @@
     "path": "data/musics/GÀ GÁY REMIX.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 92
   },
   {
     "label": "Lòng mẹ",
@@ -741,7 +833,8 @@
     "path": "data/musics/Lòng mẹ(Y Vân) _ đàn bầu - Phạm Đức Thành.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 93
   },
   {
     "label": "Music 1",
@@ -749,7 +842,8 @@
     "path": "data/musics/MUSIC 1.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 94
   },
   {
     "label": "Mỹ 2",
@@ -757,7 +851,8 @@
     "path": "data/musics/Mỹ 2.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 95
   },
   {
     "label": "Mỹ",
@@ -765,7 +860,8 @@
     "path": "data/musics/Mỹ.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 96
   },
   {
     "label": "Nhảy đi",
@@ -773,7 +869,8 @@
     "path": "data/musics/NHẢY ĐI, NHẢY ĐI.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 97
   },
   {
     "label": "Nhạc buồn",
@@ -781,7 +878,8 @@
     "path": "data/musics/NHẠC BUỒN.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 98
   },
   {
     "label": "Trả kèo 2",
@@ -789,7 +887,8 @@
     "path": "data/musics/NHẠC TRẢ KÈO 2.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 99
   },
   {
     "label": "Trả kèo 3",
@@ -797,7 +896,8 @@
     "path": "data/musics/NHẠC TRẢ KÈO 3.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 100
   },
   {
     "label": "Trả kèo 4",
@@ -805,7 +905,8 @@
     "path": "data/musics/NHẠC TRẢ KÈO 4.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 101
   },
   {
     "label": "Trả kèo",
@@ -813,7 +914,8 @@
     "path": "data/musics/NHẠC TRẢ KÈO.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 102
   },
   {
     "label": "Win pk 1",
@@ -821,7 +923,8 @@
     "path": "data/musics/NHẠC WIN PK 1.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 103
   },
   {
     "label": "Win pk 3",
@@ -829,7 +932,8 @@
     "path": "data/musics/NHẠC WIN PK 3.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 104
   },
   {
     "label": "win pk",
@@ -837,7 +941,8 @@
     "path": "data/musics/NHẠC WIN PK.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "free"
+    "access": "free",
+    "stt": 105
   },
   {
     "label": "Tằng-tăng",
@@ -845,7 +950,8 @@
     "path": "data/musics/TẰNG-TĂNG.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 106
   },
   {
     "label": "Bo anh",
@@ -853,7 +959,8 @@
     "path": "data/musics/bo anh ta di final.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 107
   },
   {
     "label": "Chèn chèn",
@@ -861,7 +968,8 @@
     "path": "data/musics/chèn chèn tăng tăng cô.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 108
   },
   {
     "label": "Cậu cả",
@@ -869,7 +977,8 @@
     "path": "data/musics/cậu cả.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 109
   },
   {
     "label": "Hay noi di",
@@ -877,7 +986,8 @@
     "path": "data/musics/hay noi di final.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 110
   },
   {
     "label": "Keo violin",
@@ -885,7 +995,8 @@
     "path": "data/musics/keo violin.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 111
   },
   {
     "label": "Lêu lêu",
@@ -893,7 +1004,8 @@
     "path": "data/musics/lêu lêu remix.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 112
   },
   {
     "label": "Mono cat",
@@ -901,7 +1013,8 @@
     "path": "data/musics/mono cat.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 113
   },
   {
     "label": "kể chuyện",
@@ -909,7 +1022,8 @@
     "path": "data/musics/nhạc nền kể chuyện vui nhộn hài hước.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 114
   },
   {
     "label": "Saohayrade",
@@ -917,7 +1031,8 @@
     "path": "data/musics/saohayrade.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 115
   },
   {
     "label": "chọc quê",
@@ -925,7 +1040,8 @@
     "path": "data/musics/thắng chọc quê.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 116
   },
   {
     "label": "Thắng cười",
@@ -933,7 +1049,8 @@
     "path": "data/musics/thắng cười.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 117
   },
   {
     "label": "Thắng",
@@ -941,7 +1058,8 @@
     "path": "data/musics/thắng.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 118
   },
   {
     "label": "Tây du kí",
@@ -949,7 +1067,8 @@
     "path": "data/musics/tây du kí.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 119
   },
   {
     "label": "Tỏ tình",
@@ -957,7 +1076,8 @@
     "path": "data/musics/tỏ tình.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 120
   },
   {
     "label": "Đau lòng",
@@ -965,7 +1085,8 @@
     "path": "data/musics/đau lòng.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 121
   },
   {
     "label": "Đau",
@@ -973,7 +1094,8 @@
     "path": "data/musics/đau.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 122
   },
   {
     "label": "Đáng yêu",
@@ -981,6 +1103,7 @@
     "path": "data/musics/đáng yêu.mp3",
     "shortcut": "",
     "builtin": true,
-    "access": "vip"
+    "access": "vip",
+    "stt": 123
   }
 ]
