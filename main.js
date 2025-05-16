@@ -158,3 +158,9 @@ ipcMain.handle('get-db-path', () => {
   const dbFile = path.join(appPath, 'database.json');
   return dbFile;
 });
+
+ipcMain.on('toggle-always-on-top', (event, isAlwaysOnTop) => {
+  if (mainWindow) {
+    mainWindow.setAlwaysOnTop(isAlwaysOnTop);
+  }
+});

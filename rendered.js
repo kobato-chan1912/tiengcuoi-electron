@@ -172,6 +172,15 @@ window.onload = () => {
 
     const mixToggle = document.getElementById('mix-toggle');
     const shortcutToogle = document.getElementById('shortcut-toogle');
+    const TopToggle = document.getElementById('top-toggle');
+
+    TopToggle.onchange = () => {
+        const isChecked = TopToggle.checked;
+        ipcRenderer.send('toggle-always-on-top', isChecked);
+        
+    };
+
+    
 
     mixToggle.onchange = () => {
         if (licenseTypeGlobal === 'free') {
@@ -538,6 +547,7 @@ async function getLicenseInfoFromMain() {
 
 
         document.getElementById('ads-premium').remove();
+        document.querySelector('.enter-key').remove();
     }
 
     loadFiles('effect');
